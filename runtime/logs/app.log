@@ -1,0 +1,430 @@
+2021-03-15 06:42:17 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-03-15 06:42:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'nurikadewi'
+    '__CFBundleIdentifier' => 'com.microsoft.VSCode'
+    'COMMAND_MODE' => 'unix2003'
+    'LOGNAME' => 'nurikadewi'
+    'PATH' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin:/Library/Apple/usr/bin:/usr/local/Cellar/php@7.4/7.4.14_1/bin:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FZfeQFwmoF/Listeners'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/nurikadewi'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'TMPDIR' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/'
+    'XPC_SERVICE_NAME' => '0'
+    'XPC_FLAGS' => '0x0'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'undefined'
+    'SHLVL' => '1'
+    'PWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'OLDPWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'ANDROID_SDK_ROOT' => '/Users/nurikadewi/Library/Android/sdk'
+    'ANDROID_HOME' => '/Users/nurikadewi/Library/Android/sdk'
+    'TERM_PROGRAM' => 'vscode'
+    'TERM_PROGRAM_VERSION' => '1.54.2'
+    'LANG' => 'en_US.UTF-8'
+    'COLORTERM' => 'truecolor'
+    'VSCODE_GIT_IPC_HANDLE' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/vscode-git-a9dacb70f8.sock'
+    'GIT_ASKPASS' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh'
+    'VSCODE_GIT_ASKPASS_NODE' => '/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js'
+    'TERM' => 'xterm-256color'
+    '_' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1615790537.3722
+    'REQUEST_TIME' => 1615790537
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2021-03-15 06:42:58 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-03-15 06:42:58 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'nurikadewi'
+    '__CFBundleIdentifier' => 'com.microsoft.VSCode'
+    'COMMAND_MODE' => 'unix2003'
+    'LOGNAME' => 'nurikadewi'
+    'PATH' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin:/Library/Apple/usr/bin:/usr/local/Cellar/php@7.4/7.4.14_1/bin:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FZfeQFwmoF/Listeners'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/nurikadewi'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'TMPDIR' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/'
+    'XPC_SERVICE_NAME' => '0'
+    'XPC_FLAGS' => '0x0'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'undefined'
+    'SHLVL' => '1'
+    'PWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'OLDPWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'ANDROID_SDK_ROOT' => '/Users/nurikadewi/Library/Android/sdk'
+    'ANDROID_HOME' => '/Users/nurikadewi/Library/Android/sdk'
+    'TERM_PROGRAM' => 'vscode'
+    'TERM_PROGRAM_VERSION' => '1.54.2'
+    'LANG' => 'en_US.UTF-8'
+    'COLORTERM' => 'truecolor'
+    'VSCODE_GIT_IPC_HANDLE' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/vscode-git-a9dacb70f8.sock'
+    'GIT_ASKPASS' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh'
+    'VSCODE_GIT_ASKPASS_NODE' => '/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js'
+    'TERM' => 'xterm-256color'
+    '_' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1615790578.5852
+    'REQUEST_TIME' => 1615790578
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2021-03-15 06:43:39 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-03-15 06:43:39 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'USER' => 'nurikadewi'
+    '__CFBundleIdentifier' => 'com.microsoft.VSCode'
+    'COMMAND_MODE' => 'unix2003'
+    'LOGNAME' => 'nurikadewi'
+    'PATH' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin:/Library/Apple/usr/bin:/usr/local/Cellar/php@7.4/7.4.14_1/bin:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FZfeQFwmoF/Listeners'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/nurikadewi'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'TMPDIR' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/'
+    'XPC_SERVICE_NAME' => '0'
+    'XPC_FLAGS' => '0x0'
+    'ORIGINAL_XDG_CURRENT_DESKTOP' => 'undefined'
+    'SHLVL' => '1'
+    'PWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'OLDPWD' => '/Applications/XAMPP/xamppfiles/htdocs/mirai-medis'
+    'ANDROID_SDK_ROOT' => '/Users/nurikadewi/Library/Android/sdk'
+    'ANDROID_HOME' => '/Users/nurikadewi/Library/Android/sdk'
+    'TERM_PROGRAM' => 'vscode'
+    'TERM_PROGRAM_VERSION' => '1.54.2'
+    'LANG' => 'en_US.UTF-8'
+    'COLORTERM' => 'truecolor'
+    'VSCODE_GIT_IPC_HANDLE' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/vscode-git-a9dacb70f8.sock'
+    'GIT_ASKPASS' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh'
+    'VSCODE_GIT_ASKPASS_NODE' => '/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)'
+    'VSCODE_GIT_ASKPASS_MAIN' => '/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js'
+    'TERM' => 'xterm-256color'
+    '_' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1615790619.7703
+    'REQUEST_TIME' => 1615790619
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2021-03-15 06:51:44 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:712
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(712): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#21 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1032): yii\db\Connection->open()
+#1 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Connection.php(1019): yii\db\Connection->getMasterPdo()
+#2 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(258): yii\db\Connection->getSlavePdo()
+#3 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(1160): yii\db\Command->prepare(true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Command.php(407): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(758): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(894): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Controller.php(184): yii\base\Controller->runAction('', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Module.php(534): yii\console\Controller->runAction('', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction('migrate', Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction('migrate', Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Applications/XAMPP/xamppfiles/htdocs/mirai-medis/yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 2002
+    [2] => No such file or directory
+)
+
+2021-03-15 06:51:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TMPDIR' => '/var/folders/lc/7l7vwdyx59s6w2q1pnqyj7hc0000gn/T/'
+    '__CFBundleIdentifier' => 'com.apple.Terminal'
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FZfeQFwmoF/Listeners'
+    'XPC_SERVICE_NAME' => '0'
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'TERM_PROGRAM_VERSION' => '440'
+    'TERM_SESSION_ID' => 'F971C0F4-3947-4176-AB4B-0F8A1839DA3D'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/nurikadewi'
+    'LOGNAME' => 'nurikadewi'
+    'USER' => 'nurikadewi'
+    'PATH' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin:/Library/Apple/usr/bin:/Users/nurikadewi/Library/Android/sdk/tools:/Users/nurikadewi/Library/Android/sdk/platform-tools:/Users/nurikadewi/NurikaDewi/Projects/Flutter-Repo/flutter/bin'
+    'SHLVL' => '1'
+    'PWD' => '/Applications/XAMPP/htdocs/mirai-medis'
+    'OLDPWD' => '/Applications/XAMPP/htdocs'
+    'ANDROID_SDK_ROOT' => '/Users/nurikadewi/Library/Android/sdk'
+    'ANDROID_HOME' => '/Users/nurikadewi/Library/Android/sdk'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/local/Cellar/php@7.4/7.4.14_1/bin/php'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1615791104.5799
+    'REQUEST_TIME' => 1615791104
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

@@ -1,0 +1,16 @@
+{
+    "name": "rest/yii2-rest-api",
+    "description": "REST API with Yii2",
+    "license": "Apache-2.0",
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "yiisoft/yii2-httpclient": "~2.0.0",
+        "linslin/yii2-curl": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
